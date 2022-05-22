@@ -1,0 +1,1 @@
+export const mockMusicUrl = 'http://localhost:4200/assets/mock.wav'

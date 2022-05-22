@@ -1,0 +1,19 @@
+<li class="center-col gap-2">
+    <button class="center-col gap-2 items-start active-scale active-opacity rounded-xl active:scale-95">
+        <img alt={{artist.name}} src={{artist.image}}
+            class="rounded-full aspect-square w-[200px] max-w-[40vw] bg-gray-100">
+        <div>
+            <div>
+                <span class="font-semibold">
+                    {{artist.name}}
+                </span>
+            </div>
+            <div class="text-sm text-gray-500 flex flex-col">
+                {{bigNumberString(artist.followersCount)}} Seguidores
+            </div>
+        </div>
+    </button>
+    <button class="main-button">
+        Seguir
+    </button>
+</li>

@@ -1,0 +1,7 @@
+<nav class="flex flex-col bg-gray-100 h-screen sticky top-0 overflow-y-auto scrollbar-hide">
+    <a *ngFor="let navItem of navList" [routerLink]="navItem.routerLink"
+        class="flex flex-row gap-2 aspect-auto w-auto h-auto p-3 rounded-lg active-scale active-opacity">
+        <fa-icon size="lg" [icon]="navItem.icon"></fa-icon>
+        <div class="text-sm">{{navItem.text}}</div>
+    </a>
+</nav>

@@ -1,0 +1,9 @@
+<style>
+    .show-part {
+        grid-auto-columns: min(85vw, 22rem);
+    }
+</style>
+<ul [ngClass]="{'show-part':musics.length>maxRows}" style="grid-template-rows: repeat({{maxRows}}, minmax(0, 1fr))"
+    class="grid grid-flow-col overflow-x-scroll gap-2 px-2 scrollbar-hide">
+    <app-music-vertical-item [music]="music" *ngFor="let music of musics"></app-music-vertical-item>
+</ul>

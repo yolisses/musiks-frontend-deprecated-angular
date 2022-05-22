@@ -1,0 +1,26 @@
+<app-nav>
+    <div class="p-2 gap-2 flex flex-col">
+        <div class="flex flex-row w-full gap-2">
+            <img [src]="playlist.image" class="aspect-square w-32 rounded-lg" [alt]="playlist.name">
+            <div>
+                <h1 class="text-2xl">{{playlist.name}}</h1>
+                <div>de {{playlist.author.name}}</div>
+                <div>Playlist &bull; {{playlist.musicsCount}} músicas &bull;
+                    {{secondsToDurationStrings(playlist.totalTime)}}</div>
+            </div>
+        </div>
+        <div class="flex flex-row gap-2">
+            <button class="main-button flex-1">
+                <fa-icon size="lg" [icon]="faRandom"></fa-icon>
+                Aleatório
+            </button>
+            <button class="secondary-button flex-1">
+                <fa-icon size="lg" [icon]="faPlay"></fa-icon>
+                Reproduzir
+            </button>
+        </div>
+        {{playlist.description}}
+
+        <app-mini-music-item *ngFor="let music of playlist.musics" [music]="music"></app-mini-music-item>
+    </div>
+</app-nav>

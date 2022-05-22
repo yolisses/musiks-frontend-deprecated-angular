@@ -1,0 +1,35 @@
+<style>
+    @keyframes come-up {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: 3rem;
+        }
+    }
+</style>
+<div class="w-full">
+    <div *ngIf="music" class="bg-gray-200">
+        <div [ngStyle]="{width:(percentage||0)+'%'}" class="h-[0.2rem] bg-blue-400"></div>
+    </div>
+    <button class="max-h-12 w-full pr-2 flex flex-row items-center overflow-hidden" *ngIf="music"
+        style="animation: come-up 0.2s;">
+        <button (click)="playerService.open()"
+            class="max-h-12 w-full rounded-r-lg active-opacity pr-2 flex flex-row items-center gap-2">
+            <img [src]="music.image" class="h-12 w-12 aspect-square bg-gray-200 rounded-br-lg" />
+            <div class="">
+                <div class="font-semibold">{{music.name}}</div>
+                <div class="">{{music.artist.name}}</div>
+            </div>
+        </button>
+        <div class="ml-auto"></div>
+        <button class="icon-button"
+            (click)="playing? playerService.pause():playerService.play();$event.stopPropagation()">
+            <fa-icon size="lg" [icon]="playing?faPause:faPlay"></fa-icon>
+        </button>
+        <button class="icon-button" (click)="$event.stopPropagation()">
+            <fa-icon size="lg" [icon]="faForwardStep"></fa-icon>
+        </button>
+    </button>
+</div>

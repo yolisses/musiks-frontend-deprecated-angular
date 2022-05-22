@@ -1,0 +1,4 @@
+<audio #audioRef (play)="playerService.play()" (pause)="playerService.pause()" [autoplay]="false" [controls]="false"
+    [currentTime]="time" (timeupdate)="changeTime($event)">
+    <source src="assets/mock.wav" type="audio/wav">
+</audio>

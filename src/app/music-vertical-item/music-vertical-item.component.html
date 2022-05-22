@@ -1,0 +1,22 @@
+<li class="w-full">
+    <button (click)="play()" class="center-row w-full active-scale active-opacity rounded-xl active:scale-95">
+        <img alt={{music.name}} src={{music.image}} class="rounded-lg w-20 h-20 bg-gray-100">
+        <div class="flex flex-col items-start p-2 w-full">
+            <div class="font-semibold">
+                {{music.name}}
+            </div>
+            <div class="text-sm">
+                {{music.artist.name}}
+            </div>
+            <div class="text-gray-500 center-row gap-2 text-sm">
+                <span>
+                    <fa-icon size="xs" [icon]="faPlay"></fa-icon>
+                    {{bigNumberString(music.visualizations)}}
+                </span>
+                <span>
+                    {{secondsToDurationStrings(music.duration)}}
+                </span>
+            </div>
+        </div>
+    </button>
+</li>

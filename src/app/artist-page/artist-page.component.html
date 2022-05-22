@@ -1,0 +1,39 @@
+<app-nav>
+    <img [src]="artist.cover" [alt]="artist.name" class="object-cover h-[150px]">
+    <div class="flex flex-row">
+
+        <div class="absolute -translate-y-8">
+            <img [src]="artist.image" [alt]="artist.name"
+                class="rounded-full w-32 aspect-square border-[0.5rem] border-white">
+        </div>
+        <div class="w-32 h-[6rem]">
+        </div>
+        <div class="p-2">
+            <h1 class="text-2xl">
+                {{artist.name}}
+            </h1>
+            <h2>
+                @{{artist.username}}
+            </h2>
+            <div class="text-sm text-gray-500 flex flex-row gap-2">
+                <span>{{bigNumberString(artist.followersCount)}} Seguidores</span>
+                <span>640 Seguindo</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-2">
+        {{artist.bio}}
+    </div>
+    <div class="gap-6 flex flex-col">
+        <app-session intro="Fixado em " name="Destaques">
+            <app-musics-row></app-musics-row>
+        </app-session>
+        <app-session intro="mais de" name="The Chainsmokers">
+            <app-musics-cols></app-musics-cols>
+        </app-session>
+        <app-artists-session name="Fãs também curtiram"></app-artists-session>
+        <app-session name="Albuns">
+            <app-musics-row></app-musics-row>
+        </app-session>
+    </div>
+</app-nav>

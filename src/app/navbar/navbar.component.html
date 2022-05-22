@@ -1,0 +1,6 @@
+<nav class="grid grid-cols-4">
+    <a *ngFor="let navItem of navList" [routerLink]="navItem.routerLink" class="icon-button">
+        <fa-icon size="lg" [icon]="navItem.icon"></fa-icon>
+        <div class="text-xs">{{navItem.text}}</div>
+    </a>
+</nav>

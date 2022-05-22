@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li {
+  list-style-type: none;
+}
+
+html,
+body {
+  @apply flex flex-col
+}
+
+.center {
+  @apply flex items-center justify-center
+}
+
+.active-opacity {
+  @apply bg-black bg-opacity-0
+}
+
+.active-opacity:hover {
+  @apply bg-black bg-opacity-10
+}
+
+.active-scale {
+  @apply transform transition-transform duration-75
+}
+
+.active-scale:active {
+  @apply scale-90
+}
+
+.icon-button {
+  @apply rounded-full flex-col center active-scale active-opacity aspect-square w-12 justify-self-center
+}
+
+.center-row {
+  @apply flex flex-row items-center
+}
+
+.center-col {
+  @apply flex flex-col items-center
+}
+
+.main-button {
+  @apply bg-blue-500 text-white active-scale py-2 px-4 rounded-lg
+}
+
+.secondary-button {
+  @apply bg-gray-200 active-opacity active-scale py-2 px-4 rounded-lg
+}

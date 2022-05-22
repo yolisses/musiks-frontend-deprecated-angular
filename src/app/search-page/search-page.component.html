@@ -1,0 +1,19 @@
+<app-nav>
+    <div>
+        <div class="flex flex-row gap-2 p-2">
+            <button class="icon-button">
+                <fa-icon size="lg" [icon]="faArrowLeft"></fa-icon>
+            </button>
+            <input type="text" placeholder="Pesquisar por..." class="w-full px-2">
+            <button class="icon-button">
+                <fa-icon size="lg" [icon]="faTimes"></fa-icon>
+            </button>
+        </div>
+        <div class="flex flex-row gap-2 px-2 overflow-y-auto scrollbar-hide">
+            <button *ngFor="let category of categories"
+                class="active-scale whitespace-nowrap py-1 px-2 rounded-full bg-gray-100">
+                {{category}}
+            </button>
+        </div>
+    </div>
+</app-nav>
