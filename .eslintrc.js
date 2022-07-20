@@ -1,4 +1,4 @@
-module.exports ={
+module.exports = {
   "root": true,
   "ignorePatterns": [
     "projects/**/*"
@@ -19,6 +19,7 @@ module.exports ={
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "@angular-eslint/no-empty-lifecycle-method": "off",
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -44,8 +45,7 @@ module.exports ={
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {
-      }
+      "rules": {}
     }
   ]
 }

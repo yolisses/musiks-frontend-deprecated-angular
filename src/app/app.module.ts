@@ -32,6 +32,7 @@ import { VerticalNavComponent } from './vertical-nav/vertical-nav.component';
 import { MusicsRowComponent } from './musics-row/musics-row.component';
 import { MusicsColsComponent } from './musics-cols/musics-cols.component';
 import { MePageComponent } from './me-page/me-page.component';
+import { LoginButtonComponent } from './login-button/login-button.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { MePageComponent } from './me-page/me-page.component';
     MusicsRowComponent,
     MusicsColsComponent,
     MePageComponent,
+    LoginButtonComponent,
   ],
   imports: [
     BrowserModule,

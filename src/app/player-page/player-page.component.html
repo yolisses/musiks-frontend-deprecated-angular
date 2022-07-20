@@ -1,6 +1,5 @@
 <style>
     .mask {
-        -webkit-mask-image: linear-gradient(transparent, black 10%, black 90%, transparent);
         mask-image: linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%);
     }
 </style>
@@ -28,8 +27,8 @@
             {{music.lyrics!.split('\n')[1]}}
         </div>
     </div>
-    <img src="assets/mock.jpg" alt="" class="absolute blur-xl w-screen h-screen scale-150 -z-50" />
-    <!-- <img [src]="music.image" alt="" class="absolute w-screen top-1/2 -translate-y-1/2"> -->
+    <img [src]="music.image" alt="" class="absolute blur-xl w-screen h-screen scale-150 -z-50" />
+     <img [src]="music.image" alt="" class="absolute w-screen top-1/2 -translate-y-1/2">
     <img src="assets/mock.jpg" alt=""
         class="mask w-[min(100vw,100vh)] h-[min(100vw,100vh)] fixed -z-40 top-[calc(50%-50vw)]" />
     <div class="fixed bottom-0 w-full bg-gradient-to-t from-[#0008] to-transparent">
