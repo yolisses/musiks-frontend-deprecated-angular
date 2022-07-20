@@ -33,6 +33,8 @@ import { MusicsRowComponent } from './musics-row/musics-row.component';
 import { MusicsColsComponent } from './musics-cols/musics-cols.component';
 import { MePageComponent } from './me-page/me-page.component';
 import { LoginButtonComponent } from './login-button/login-button.component';
+import { PrivacyPolicyPageComponent } from './privacy-policy-page/privacy-policy-page.component';
+import { TermsOfUsePageComponent } from './terms-of-use-page/terms-of-use-page.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,8 @@ import { LoginButtonComponent } from './login-button/login-button.component';
     MusicsColsComponent,
     MePageComponent,
     LoginButtonComponent,
+    PrivacyPolicyPageComponent,
+    TermsOfUsePageComponent,
   ],
   imports: [
     BrowserModule,
